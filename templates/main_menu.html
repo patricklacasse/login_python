@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Menu</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Main Menu</h1>
+        <p>Welcome to the main menu, {{ username }}!</p>
+        
+        <!-- Placeholder menu options/buttons -->
+        <ul>
+            <li><a href="#">Option 1</a></li>
+            <li><a href="#">Option 2</a></li>
+            <li><a href="#">Option 3</a></li>
+        </ul>
+
+        <!-- Logout button -->
+        <form action="{{ url_for('logout') }}" method="post">
+            <input type="submit" value="Logout">
+        </form>
+    </div>
+</body>
+</html>
